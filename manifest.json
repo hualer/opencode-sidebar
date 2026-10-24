@@ -1,0 +1,30 @@
+{
+  "manifest_version": 3,
+  "name": "OpenCode SideBar",
+  "version": "0.2.1",
+  "description": "OpenCode SideBar for the official opencode web UI: one tick per user turn on the right of the conversation, click to jump.",
+  "content_scripts": [
+    {
+      "matches": [
+        "http://localhost/*",
+        "http://127.0.0.1/*",
+        "https://localhost/*",
+        "https://127.0.0.1/*"
+      ],
+      "js": [
+        "src/debug.js",
+        "src/api.js",
+        "src/jump.js",
+        "src/rail.js",
+        "src/main.js"
+      ],
+      "run_at": "document_idle"
+    }
+  ],
+  "host_permissions": [
+    "http://localhost/*",
+    "http://127.0.0.1/*",
+    "https://localhost/*",
+    "https://127.0.0.1/*"
+  ]
+}

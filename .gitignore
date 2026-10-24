@@ -1,0 +1,12 @@
+# macOS
+.DS_Store
+
+# Trae / local tooling state
+.mimosa/
+
+# Node
+node_modules/
+
+# 本地凭据与临时输出（tools/remote.mjs 从进程环境读取，绝不入库）
+tools/*.local
+*.log
